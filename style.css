@@ -230,7 +230,7 @@ body {
 
 
 .menu-item.special::before {
-    content: "Chef's Kiss!";
+    content: "Chef's Special";
     position: absolute;
     top: 15px;
     left: -35px;
