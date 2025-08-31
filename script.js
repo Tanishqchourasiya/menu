@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    // --- Floating Menu Logic ---
+
     const floatingMenu = document.querySelector('.floating-menu');
     const mainButton = document.querySelector('.floating-menu .main-button');
 
     mainButton.addEventListener('click', function() {
-        // Toggles the 'open' class on the main container
+
         floatingMenu.classList.toggle('open');
     });
 
 
-    // --- Original Fade-in Logic (Still works!) ---
+
     const observerOptions = {
         root: null, 
         rootMargin: '0px',

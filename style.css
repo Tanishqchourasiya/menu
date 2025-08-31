@@ -1,18 +1,12 @@
-/* --- CSS VARIABLES & GENERAL SETUP --- */
-/* --- Add this at the TOP of your CSS file --- */
 html {
     scroll-behavior: smooth;
 }
 
-
-/* --- Add this entire block at the BOTTOM of your CSS file --- */
-
-/* --- FLOATING MENU --- */
 .floating-menu {
     position: fixed;
     bottom: 25px;
     right: 25px;
-    z-index: 1000; /* Ensures it stays on top */
+    z-index: 1000;
 }
 
 .floating-menu .main-button {
@@ -32,12 +26,12 @@ html {
 
 .floating-menu .main-button:hover {
     transform: scale(1.1);
-    background-color: #e0559d; /* Slightly darker pink on hover */
+    background-color: #e0559d;
 }
 
 .floating-menu .nav-option {
     position: absolute;
-    bottom: 5px; /* Position them inside the main button initially */
+    bottom: 5px;
     right: 5px;
     width: 50px;
     height: 50px;
@@ -51,27 +45,26 @@ html {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     text-decoration: none;
     opacity: 0;
-    pointer-events: none; /* Can't click when hidden */
+    pointer-events: none;
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease;
 }
 
 .floating-menu .nav-option:hover {
-    background-color: #ffed4a; /* Lighter gold on hover */
-    transform: scale(1.15); /* Keep original transform and add scaling */
+    background-color: #ffed4a;
+    transform: scale(1.15);
 }
 
-/* --- ANIMATION LOGIC --- */
-/* When the .open class is added via JS */
+
 .floating-menu.open .main-button {
     transform: rotate(45deg);
 }
 
 .floating-menu.open .nav-options .nav-option {
     opacity: 1;
-    pointer-events: auto; /* Can click now */
+    pointer-events: auto;
 }
 
-/* Position each option in an arc */
+
 .floating-menu.open .nav-options .nav-option:nth-child(1) {
     transform: translate(-80px, -20px);
 }
@@ -82,10 +75,10 @@ html {
     transform: translate(-15px, -110px);
 }
 :root {
-    --primary-pink: #ff69b4; /* Hot Pink */
-    --secondary-pink: #f8c8dc; /* Lighter Blush Pink */
-    --accent-gold: #ffd700; /* Gold for highlights */
-    --background-cream: #fffaf0; /* Creamy white background */
+    --primary-pink: #ff69b4;
+    --secondary-pink: #f8c8dc;
+    --accent-gold: #28cc44;
+    --background-cream: #fffaf0;
     --text-dark: #333;
     --text-light: #fff;
     --shadow-color: rgba(0, 0, 0, 0.1);
@@ -99,10 +92,10 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
-/* --- NEW: MENU NAVIGATION BUTTONS --- */
+
 .menu-nav {
     text-align: center;
-    padding: 2.5rem 1rem 1rem 1rem; /* Extra top padding */
+    padding: 2.5rem 1rem 1rem 1rem;
 }
 
 .cta-button {
@@ -133,7 +126,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- SPLASH BANNER / HEADER --- */
+
 .splash-banner {
     background: linear-gradient(135deg, var(--secondary-pink), var(--primary-pink));
     color: var(--text-light);
@@ -154,7 +147,7 @@ body {
     margin-top: 0.5rem;
 }
 
-/* --- MENU CATEGORY & GRID --- */
+
 .menu-category {
     padding: 2rem 1rem;
     max-width: 1200px;
@@ -176,7 +169,7 @@ body {
     gap: 1.5rem;
 }
 
-/* --- MENU ITEM CARD --- */
+
 .menu-item {
     background: var(--text-light);
     border-radius: 15px;
@@ -185,7 +178,7 @@ body {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* For special badge */
+    position: relative; 
 }
 
 .menu-item:hover {
@@ -214,7 +207,7 @@ body {
 
 .description {
     font-size: 0.95rem;
-    flex-grow: 1; /* Pushes price to the bottom */
+    flex-grow: 1;
     margin-bottom: 1rem;
 }
 
@@ -235,7 +228,7 @@ body {
     margin-right: 0.5rem;
 }
 
-/* --- CHEF'S SPECIAL BADGE --- */
+
 .menu-item.special::before {
     content: "Chef's Kiss!";
     position: absolute;
@@ -252,7 +245,6 @@ body {
 }
 
 
-/* --- FOOTER --- */
 footer {
     background: #333;
     color: var(--text-light);
@@ -280,7 +272,7 @@ footer {
     color: #aaa;
 }
 
-/* --- FADE-IN ANIMATION --- */
+
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -292,7 +284,7 @@ footer {
     transform: translateY(0);
 }
 
-/* --- RESPONSIVENESS (MEDIA QUERIES) --- */
+
 @media (min-width: 600px) {
     .menu-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -307,7 +299,7 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-/* --- NEW: CALL TO ORDER STYLING --- */
+
 .call-to-order {
     font-size: 1.2rem;
     font-weight: 600;
